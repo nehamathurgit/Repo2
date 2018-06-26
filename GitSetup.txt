@@ -23,3 +23,23 @@ D:\GitHub\Repo2> git add -A
 D:\GitHub\Repo2> git commit -m "Branch1 commit"
 D:\GitHub\Repo2>git push -u origin Branch1
 
+<<<<<<< HEAD
+=======
+9 Merging changes from Branch1 to master
+git checkout Branch1
+git add -A
+git commit -m "Branch1 Change1"
+git push origin Branch1  (to upload)
+git checkout master
+git status
+git merge master Branch1
+
+10. Deleting a branch - to delete a branch first you need to stash the uncommitted changes (if any) and then switch to other branch
+git checkout Branch1
+git stash
+git checkout master
+git branch --delete Branch1
+git push origin --delete Branch1
+
+ 
+>>>>>>> Branch1
