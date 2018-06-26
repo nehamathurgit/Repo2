@@ -41,5 +41,13 @@ git checkout master
 git branch --delete Branch1
 git push origin --delete Branch1
 
+11. To change the last checkin comment
+git checkout Branch1
+git add -A
+git commit -m "wrong comment"
+git commit --amend -m "right comment"
+
+
+
  
 >>>>>>> Branch1
