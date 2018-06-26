@@ -2,12 +2,41 @@
 2. Install git on your system from https://git-scm.com/downloads
 3. Create a working directory on your system. e.g. D:/GitHub
 4. On https://github.com/nehamathurgit, create a new Repository e.g. Repo2
-4. Use cmd or git bash installed by git
+5. In Repo2 folder, add a file GitSetup.txt
 
+6. Use cmd or git bash installed by git
 D:\GitHub> md Repo2
 D:\GitHub>Repo2
 D:\GitHub\Repo2>git init
 D:\GitHub\Repo2>git add -A
-D:\GitHub\Repo2>git commit -m "first commit"
+D:\GitHub\Repo2>git commit -m "GitSetup.txt added"
 D:\GitHub\Repo2>git remote add origin https://github.com/nehamathurgit/Repo2.git
 D:\GitHub\Repo2>git push -u origin master
+
+7. Refresh https://github.com/nehamathurgit/Repo2 to check that Repo2 has new file.
+
+8. Branching--- Before this step edit your txt file.
+D:\GitHub\Repo2> git branch
+D:\GitHub\Repo2> git branch Branch1
+D:\GitHub\Repo2> git checkout Branch1
+D:\GitHub\Repo2> git add -A
+D:\GitHub\Repo2> git commit -m "Branch1 commit"
+D:\GitHub\Repo2>git push -u origin Branch1
+
+9 Merging changes from Branch1 to master
+git checkout Branch1
+git add -A
+git commit -m "Branch1 Change1"
+git push origin Branch1  (to upload)
+git checkout master
+git status
+git merge master Branch1
+
+10. Deleting a branch - to delete a branch first you need to stash the uncommitted changes (if any) and then switch to other branch
+git checkout Branch1
+git stash
+git checkout master
+git branch --delete Branch1
+git push origin --delete Branch1
+
+ 
